@@ -2,13 +2,16 @@
 let img;
 let theta = 0;
 let s1, s2;
+let sketch;
 
 function setup() {
-  createCanvas(710, 400, WEBGL);
+  sketch = createCanvas(710, 400, WEBGL);
+  sketch.parent("p5");
   s1 = createSlider(2, 24, 2);
   s2 = createSlider(100, 200);
   img = loadImage('https://josefinaschiappacasse.github.io/ie2020tanteo/superposicion de primarios.jpg');
-
+  s1.parent("p5");
+  s2.parent("p5"); 
 }
 
 function draw() {
